@@ -1,4 +1,7 @@
+
 import itertools
+import sys
+
 def permutationsSet(coins):
   sums = []
   permutations = []
@@ -13,14 +16,17 @@ def permutationsSet(coins):
 print('Ingrese las monedas en el siguiente formato: {"coins": [1, 5, 1, 1, 1, 10, 15, 20, 100]}')
 coins = input()
 if coins:
-  coinsInt = eval(coins)
-  coinsInt = [int(x) for x in coinsInt.get("coins")]
-  sums = permutationsSet(coinsInt)
-
+  try:
+    coinsInt = eval(coins)
+    coinsInt = [int(x) for x in coinsInt.get("coins")]
+    sums = permutationsSet(coinsInt)
+  except:
+    print("el formato ingresado no es correcto")
+    sys.exit()
   s = [x for x in range(1, max(sums)) if x not in sums]
   if s:
     print(min(s))
   else:
     print(max(sums) + 1)
 else:
-  print("El arreglo no cuenta con datos") 
+  print("El arreglo no cuenta con datos")
