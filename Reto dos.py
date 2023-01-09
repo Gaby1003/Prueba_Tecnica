@@ -8,6 +8,7 @@ def orderDatas(squares):
   return squares
 
 s = 5
+print('Ingrese el arreglo en el siguiente formato: {"array": [-6, -5, 0, 5, 6]}')
 datas = input()
 if datas:
   data = eval(datas)
