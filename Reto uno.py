@@ -15,6 +15,7 @@ def reverse(array):
     return reversedList
 
 s = 5
+print('Ingrese el arreglo en el siguiente formato: [60, 6, 5, 4, 3, 2, 7, 7, 29, 1]')
 numbers = input()
 if numbers:
   datas = numbers.replace("[]","")
