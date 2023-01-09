@@ -10,6 +10,7 @@ def permutationsSet(coins):
     set(sums)
   return sums
 
+print('Ingrese las monedas en el siguiente formato: {"coins": [1, 5, 1, 1, 1, 10, 15, 20, 100]}')
 coins = input()
 if coins:
   coinsInt = eval(coins)
